@@ -1,0 +1,6 @@
+name: "My recipe"
+id: "my-recipe"
+input:
+  url: "https://example.com/my-data.tif"
+output:
+  dataone_id: "XYZ"
