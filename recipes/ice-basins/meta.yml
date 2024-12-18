@@ -7,6 +7,6 @@ name: "Ice Basins PDG"
 id: "ice-basins"
   # TODO: figure out accessing the data differently than this: https://github.com/QGreenland-Net/argo-exploration/blob/main/data/Ice_Basins_1000.gpkg
 input:
-  url: 
+  url: "https://github.com/QGreenland-Net/argo-exploration/raw/medium-workflow/data/Ice_Basins_1000.gpkg" 
 output:
   dataone_id: "TODO"
