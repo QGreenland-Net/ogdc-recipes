@@ -1,6 +1,7 @@
 name: "September 2023 Sea Ice Concentration Average"
 id: "sea-ice-conc-sept-2023"
 input:
-  url: "https://noaadata.apps.nsidc.org/NOAA/G02135/north/monthly/geotiff/09_Sep/N_202309_concentration_v3.0.tif"
+  params: 
+    - "https://noaadata.apps.nsidc.org/NOAA/G02135/north/monthly/geotiff/09_Sep/N_202309_concentration_v3.0.tif"
 output:
   dataone_id: "TODO"
