@@ -1,0 +1,13 @@
+name: "ADC Visualization workflow"
+# IMPORTANT: _ is not allowed in k8s object names, and we will use this string
+# to create those, so we have to ban _. Only allowed chars are `-`, `.`,
+# lowercase alphanumeric. Is there a pydantic validator we can use? We need to
+# design a schema for meta.yaml too. That should probably live in the
+# runner...?
+id: "viz-workflow"
+input:
+  params:
+    - "https://demo.arcticdata.io/tiles/3dtt/Ice_Basins_1000.gpkg"
+    - "https://gist.githubusercontent.com/rushirajnenuji/1b41924b8cb81ae8a9795823b9a89ea2/raw/3f0f78840dd345a69e1a863b972eedec6c74c2a6/viz-config.json"
+output:
+  dataone_id: "TODO"
