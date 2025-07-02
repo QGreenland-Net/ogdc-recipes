@@ -5,9 +5,12 @@ name: "ADC Visualization workflow"
 # design a schema for meta.yaml too. That should probably live in the
 # runner...?
 id: "viz-workflow"
+type: "visualization"
 input:
   params:
-    - "https://demo.arcticdata.io/tiles/OGDC/QGnet/viz-workflow/ice_basins.gpkg"
-    - "https://demo.arcticdata.io/tiles/OGDC/QGnet/viz-workflow/viz_config.json"
+    - value: "https://demo.arcticdata.io/tiles/OGDC/QGnet/viz-workflow/ice_basins.gpkg"
+      type: "url"
+    - value: "pvc:viz-workflow/viz_config.json"
+      type: "pvc_mount"
 output:
   dataone_id: "TODO"
