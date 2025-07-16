@@ -1,3 +1,37 @@
 {
-    "stage": true
+  "deduplicate_clip_to_footprint": false,
+  "dir_input": "/mnt/workflow/viz-workflow/output/batch/",
+  "ext_input": ".gpkg",
+  "dir_staged": "/mnt/workflow/viz-workflow/output/staged/",
+  "dir_geotiff": "/mnt/workflow/viz-workflow/output/raster/geotiff/",
+  "dir_web_tiles": "/mnt/workflow/viz-workflow/output/raster/web-tiles/",
+  "filename_staging_summary": "/mnt/workflow/viz-workflow/output/staged/staging_summary.csv",
+  "filename_rasterization_events": "/mnt/workflow/viz-workflow/output/raster/rasterization_events.csv",
+  "filename_rasters_summary": "/mnt/workflow/viz-workflow/output/raster/rasters_summary.csv",
+  "tms_id": "WGS1984Quad",
+  "z_range": [
+    0,
+    13
+  ],
+  "geometricError": 57,
+  "z_coord": 0,
+  "statistics": [
+    {
+      "name": "coverage",
+      "weight_by": "area",
+      "property": "area",
+      "aggregation_method": "sum",
+      "resampling_method": "average",
+      "palette": [
+        "#edf8e9",
+        "#a1d99b",
+        "#41ab5d",
+        "#005a32"
+      ],
+      "nodata_val": 0,
+      "nodata_color": "#ffffff00"
+    }
+  ],
+  "deduplicate_method": null,
+  "deduplicate_at": null
 }
