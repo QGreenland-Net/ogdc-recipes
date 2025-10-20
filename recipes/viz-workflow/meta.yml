@@ -19,7 +19,8 @@ name: "ADC Visualization workflow"
 # design a schema for meta.yaml too. That should probably live in the
 # runner...?
 id: "viz-workflow"
-type: "visualization"
+workflow:
+  type: "visualization"
 input:
   params:
     - value: "https://demo.arcticdata.io/tiles/OGDC/QGnet/viz-workflow/ice_basins.gpkg"
