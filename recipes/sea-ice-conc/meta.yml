@@ -1,5 +1,4 @@
 name: "September 2023 Sea Ice Concentration Average"
-id: "sea-ice-conc-sept-2023"
 workflow:
   type: "shell"
 input:

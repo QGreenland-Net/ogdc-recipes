@@ -4,7 +4,6 @@ name: "Water measurements from seal tag data"
 # lowercase alphanumeric. Is there a pydantic validator we can use? We need to
 # design a schema for meta.yaml too. That should probably live in the
 # runner...?
-id: "seal-tags"
 workflow:
   type: "shell"
 input:

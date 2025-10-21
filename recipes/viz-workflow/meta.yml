@@ -18,7 +18,6 @@ name: "ADC Visualization workflow"
 # lowercase alphanumeric. Is there a pydantic validator we can use? We need to
 # design a schema for meta.yaml too. That should probably live in the
 # runner...?
-id: "viz-workflow"
 workflow:
   type: "visualization"
 input:
