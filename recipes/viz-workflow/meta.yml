@@ -20,6 +20,7 @@ name: "ADC Visualization workflow"
 # runner...?
 workflow:
   type: "visualization"
+  config_file: "config.json"
 input:
   params:
     - value: "https://demo.arcticdata.io/tiles/OGDC/QGnet/viz-workflow/ice_basins.gpkg"
