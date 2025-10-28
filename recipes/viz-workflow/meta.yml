@@ -18,8 +18,9 @@ name: "ADC Visualization workflow"
 # lowercase alphanumeric. Is there a pydantic validator we can use? We need to
 # design a schema for meta.yaml too. That should probably live in the
 # runner...?
-id: "viz-workflow"
-type: "visualization"
+workflow:
+  type: "visualization"
+  config_file: "config.json"
 input:
   params:
     - value: "https://demo.arcticdata.io/tiles/OGDC/QGnet/viz-workflow/ice_basins.gpkg"
