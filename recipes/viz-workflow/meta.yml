@@ -26,5 +26,5 @@ input:
     - value: "https://demo.arcticdata.io/tiles/OGDC/QGnet/viz-workflow/ice_basins.gpkg"
       type: "url"
 output:
-  dataone_id: "TODO"
+  type: "pvc"
 image: "ghcr.io/permafrostdiscoverygateway/pdgworkflow:latest"
