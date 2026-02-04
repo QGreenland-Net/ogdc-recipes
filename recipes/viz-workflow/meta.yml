@@ -27,4 +27,3 @@ input:
       type: "url"
 output:
   type: "pvc"
-image: "ghcr.io/permafrostdiscoverygateway/pdgworkflow:latest"
