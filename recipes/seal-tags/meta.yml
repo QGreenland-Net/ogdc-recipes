@@ -12,4 +12,4 @@ input:
       value:  "resource_map_urn:uuid:cfe3fbb2-0585-40b5-8243-8fa47fcfeb9b"
       filename: "ct71_ODV.csv"
 output:
-  dataone_id: "TODO"
+  type: "temporary"
