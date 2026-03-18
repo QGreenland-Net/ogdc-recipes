@@ -1,0 +1,15 @@
+name: "Arctic Plant AGB - Greenland (tiles A3, B2, B3)"
+
+workflow:
+  type: "shell"
+
+input:
+  params:
+    - type: "dataone"
+      dataset_identifier: "resource_map_doi:10.18739/A2NS0M06B"
+      # Grabs all resolutions (p025, p500, p975) for all tiles.
+      # The clip step in recipe.sh limits output to Greenland bbox.
+      filename: "agb/plant/plant_agb_2020_*_{B3,A3,B2}.tif"
+
+output:
+  type: "temporary"
