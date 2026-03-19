@@ -11,8 +11,11 @@ input:
     - type: "dataone"
       dataset_identifier: "resource_map_doi:10.18739/A2NS0M06B"
       filename: "plant_agb_2020_p500_B2.tif"
-    - type: "dataone"
-      dataset_identifier: "resource_map_doi:10.18739/A2NS0M06B"
+#     - type: "dataone"
+#       dataset_identifier: "resource_map_doi:10.18739/A2NS0M06B"
+#       filename: "plant_agb_2020_p500_B3.tif"
+    - type: "url"
+      value: "https://arcticdata.io/metacat/d1/mn/v2/object/urn%3Auuid%3A28cb7b35-883f-4774-a126-4c2909438d00"
       filename: "plant_agb_2020_p500_B3.tif"
 
 output:
