@@ -5,15 +5,15 @@ workflow:
 
 input:
   params:
-#     - type: "dataone"
-#       dataset_identifier: "resource_map_doi:10.18739/A2NS0M06B"
-#       filename: "plant_agb_2020_p500_B3.tif"
     - type: "dataone"
       dataset_identifier: "resource_map_doi:10.18739/A2NS0M06B"
       filename: "plant_agb_2020_p500_A3.tif"
     - type: "dataone"
       dataset_identifier: "resource_map_doi:10.18739/A2NS0M06B"
       filename: "plant_agb_2020_p500_B2.tif"
+    - type: "dataone"
+      dataset_identifier: "resource_map_doi:10.18739/A2NS0M06B"
+      filename: "plant_agb_2020_p500_B3.tif"
 
 output:
   type: "temporary"
