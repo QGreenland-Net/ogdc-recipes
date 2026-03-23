@@ -1,4 +1,4 @@
-name: "Arctic Plant AGB Greenland tiles A3 B2 B3"
+name: "Arctic Plant AGB Greenland"
 
 workflow:
   type: "shell"
