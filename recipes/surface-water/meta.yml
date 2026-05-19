@@ -1,0 +1,41 @@
+# OGDC Visualization Workflow Recipe Configuration
+#
+# Surface water visualization recipe for the Arctic Data Center dataset:
+# "Chandi Witharana, Amal Perera, Elias Manos, Mahendra Udawalpola, Anna Liljedahl, & Matthew Jones. (2026). Alaskan Tundra Surface Water Mosaic Detected from Maxar Satellite Imagery (2001-2021). Arctic Data Center. doi:10.18739/A26Q1SK18. ".
+#
+# Source dataset:
+# - https://arcticdata.io/catalog/view/doi:10.18739/A26Q1SK18
+#
+# Portal layer:
+# - https://github.com/PermafrostDiscoveryGateway/pdg-portal/issues/17
+#
+# Documentation:
+# - Viz workflow overview: https://github.com/PermafrostDiscoveryGateway/viz-workflow
+# - ConfigManager docs: https://github.com/PermafrostDiscoveryGateway/viz-workflow/blob/feature-wf-k8s/pdgworkflow/ConfigManager.py
+# - ConfigManager config options: See config.json in this directory for example configuration
+#
+# Configuration Notes:
+# - If config.json is missing, ConfigManager will use default behavior
+# - Output includes staged vector data and 3D Tiles
+
+name: "Surface Water Data Visualization"
+# IMPORTANT: _ is not allowed in k8s object names, and we will use this string
+# to create those, so we have to ban _. Only allowed chars are `-`, `.`,
+# lowercase alphanumeric. Is there a pydantic validator we can use? We need to
+# design a schema for meta.yaml too. That should probably live in the
+# runner...?
+workflow:
+  type: "visualization"
+  config_file: "config.json"
+  parallel:
+    enabled: true
+    partition_strategy: "files"
+    partition_size: 10
+input:
+  params:
+    - type: "pvc_mount"
+      claim_name: "ogdc-test-pvc"
+      path: "/data/10.18739/A26Q1SK18/AK_Water_Mosaic_gpkg"
+      glob: "*.gpkg"
+output:
+  type: "pvc"
