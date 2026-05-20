@@ -34,7 +34,7 @@ workflow:
 input:
   params:
     - type: "pvc_mount"
-      claim_name: "ogdc-test-pvc"
+      claim_name: "cephfs-qgnet-ogdc-adc-tiles-pvc"
       path: "/data/10.18739/A26Q1SK18/AK_Water_Mosaic_gpkg"
       glob: "*.gpkg"
 output:
