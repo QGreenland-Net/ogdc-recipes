@@ -9,7 +9,7 @@
     "ext_staged": ".gpkg",
     "tms_id": "WGS1984Quad",
     "tile_path_structure": ["style", "tms", "z", "x", "y"],
-    "z_range": [0, 10],
+    "z_range": [0, 4],
     "tile_size": [256, 256],
     "enable_stager": true,
     "enable_raster": false,
