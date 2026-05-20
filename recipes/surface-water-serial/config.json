@@ -1,0 +1,18 @@
+{
+    "version": "1",
+    "dir_staged": "output/staged",
+    "dir_3dtiles": "output/3dtiles",
+    "filename_staging_summary": "output/staging_summary.csv",
+    "filename_config": "config.json",
+    "title": "Surface Water Layer",
+    "ext_input": ".gpkg",
+    "ext_staged": ".gpkg",
+    "tms_id": "WGS1984Quad",
+    "tile_path_structure": ["style", "tms", "z", "x", "y"],
+    "z_range": [0, 4],
+    "tile_size": [256, 256],
+    "enable_stager": true,
+    "enable_raster": false,
+    "enable_web_tiles": false,
+    "enable_3dtiles": true
+}
