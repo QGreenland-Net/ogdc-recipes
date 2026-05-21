@@ -34,8 +34,8 @@ workflow:
 input:
   params:
     - type: "pvc_mount"
-      claim_name: "ogdc-test-pvc"
-      path: "data/10.18739/A26Q1SK18/staged"
+      claim_name: "cephfs-qgnet-ogdc-adc-tiles-pvc"
+      path: "10.18739/A26Q1SK18/staged/staged"
       glob: "*.gpkg"
 output:
   type: "pvc"
