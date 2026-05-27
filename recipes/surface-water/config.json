@@ -1,0 +1,16 @@
+{
+    "version": "1",
+    "dir_staged": "/mnt/data/cephfs-qgnet-ogdc-adc-tiles-pvc/10.18739/A26Q1SK18/staged/staged",
+    "dir_3dtiles": "output/3dtiles",
+    "filename_config": "config.json",
+    "title": "Surface Water Layer",
+    "ext_staged": ".gpkg",
+    "tms_id": "UPSArctic3413Quad",
+    "tile_path_structure": ["style", "tms", "z", "x", "y"],
+    "z_range": [0, 10],
+    "tile_size": [256, 256],
+    "enable_stager": false,
+    "enable_raster": false,
+    "enable_web_tiles": false,
+    "enable_3dtiles": true
+}
