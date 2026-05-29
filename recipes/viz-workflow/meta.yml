@@ -12,7 +12,7 @@
 # - If config.json is missing, ConfigManager will use default behavior
 # - Output includes staged data, GeoTIFF rasters, and web tiles
 
-name: "ADC Visualization workflow"
+name: "Greenland Ice Basins Visualization workflow"
 # IMPORTANT: _ is not allowed in k8s object names, and we will use this string
 # to create those, so we have to ban _. Only allowed chars are `-`, `.`,
 # lowercase alphanumeric. Is there a pydantic validator we can use? We need to
@@ -21,9 +21,13 @@ name: "ADC Visualization workflow"
 workflow:
   type: "visualization"
   config_file: "config.json"
+  parallel:
+    enabled: true
+    partition_strategy: "files"
+    partition_size: 10
 input:
   params:
     - value: "https://demo.arcticdata.io/tiles/OGDC/QGnet/viz-workflow/ice_basins.gpkg"
       type: "url"
 output:
-  type: "pvc"
+  dataone_id: "TODO"
