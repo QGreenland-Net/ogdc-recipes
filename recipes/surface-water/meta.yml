@@ -1,7 +1,13 @@
 # OGDC Visualization Workflow Recipe Configuration
 #
-# This recipe processes geospatial data for visualization using the pdgworkflow.WorkflowManager.
-# The workflow converts vector data into web tiles for interactive mapping and archival.
+# Surface water visualization recipe for the Arctic Data Center dataset:
+# "Chandi Witharana, Amal Perera, Elias Manos, Mahendra Udawalpola, Anna Liljedahl, & Matthew Jones. (2026). Alaskan Tundra Surface Water Mosaic Detected from Maxar Satellite Imagery (2001-2021). Arctic Data Center. doi:10.18739/A26Q1SK18. ".
+#
+# Source dataset:
+# - https://arcticdata.io/catalog/view/doi:10.18739/A26Q1SK18
+#
+# Portal layer:
+# - https://github.com/PermafrostDiscoveryGateway/pdg-portal/issues/17
 #
 # Documentation:
 # - Viz workflow overview: https://github.com/PermafrostDiscoveryGateway/viz-workflow
@@ -10,9 +16,9 @@
 #
 # Configuration Notes:
 # - If config.json is missing, ConfigManager will use default behavior
-# - Output includes staged data, GeoTIFF rasters, and web tiles
+# - Output includes staged vector data and 3D Tiles
 
-name: "Greenland Ice Basins Visualization workflow"
+name: "Surface Water Data Visualization"
 # IMPORTANT: _ is not allowed in k8s object names, and we will use this string
 # to create those, so we have to ban _. Only allowed chars are `-`, `.`,
 # lowercase alphanumeric. Is there a pydantic validator we can use? We need to
@@ -24,10 +30,12 @@ workflow:
   parallel:
     enabled: true
     partition_strategy: "files"
-    partition_size: 10
+    partition_size: 50
 input:
   params:
-    - value: "https://demo.arcticdata.io/tiles/OGDC/QGnet/viz-workflow/ice_basins.gpkg"
-      type: "url"
+    - type: "pvc_mount"
+      claim_name: "cephfs-qgnet-ogdc-adc-tiles-pvc"
+      path: "10.18739/A26Q1SK18/staged/staged"
+      glob: "*.gpkg"
 output:
   type: "pvc"
