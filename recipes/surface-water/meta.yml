@@ -30,12 +30,12 @@ workflow:
   parallel:
     enabled: true
     partition_strategy: "files"
-    partition_size: 50
+    partition_size: 10
 input:
   params:
     - type: "pvc_mount"
       claim_name: "cephfs-qgnet-ogdc-adc-tiles-pvc"
-      path: "10.18739/A26Q1SK18/staged/staged"
+      path: "10.18739/A26Q1SK18/staged/staged-diff"
       glob: "*.gpkg"
 output:
   type: "pvc"
