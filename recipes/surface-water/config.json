@@ -1,6 +1,6 @@
 {
     "version": "1",
-    "dir_staged": "/mnt/data/cephfs-qgnet-ogdc-adc-tiles-pvc/10.18739/A26Q1SK18/staged/staged",
+    "dir_staged": "/mnt/data/cephfs-qgnet-ogdc-adc-tiles-pvc/10.18739/A26Q1SK18/staged/staged3",
     "dir_3dtiles": "output/3dtiles",
     "filename_config": "config.json",
     "title": "Surface Water Layer",
