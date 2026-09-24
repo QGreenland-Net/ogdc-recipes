@@ -20,7 +20,7 @@ workflow:
   parallel:
     enabled: true
     partition_strategy: "files"
-    partition_size: 10
+    partition_size: 50
 input:
   params:
     - type: "pvc_mount"
