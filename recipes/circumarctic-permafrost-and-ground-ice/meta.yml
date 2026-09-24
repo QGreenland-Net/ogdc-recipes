@@ -20,9 +20,10 @@ workflow:
   parallel:
     enabled: true
     partition_strategy: "files"
-    partition_size: 10
+    partition_size: 50
 input:
   params:
     - type: "pvc_mount"
       claim_name: "cephfs-ogdc-adc-tiles-pvc"
-      path: "/data/10.18739/FK2GGD318/permaice.gpkg"
+      path: "10.18739/FK2GGD318"
+      glob: "permaice.gpkg"
