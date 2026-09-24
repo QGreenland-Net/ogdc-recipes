@@ -1,0 +1,20 @@
+{
+    "version": "0",
+    "dir_input": "input",
+    "dir_staged": "output/staged",
+    "dir_3dtiles": "output/3dtiles",
+    "filename_staging_summary": "output/staging_summary.csv",
+    "filename_config": "config.json",
+    "title": "Circum-Arctic Permafrost and Ground Ice Conditions",
+    "ext_input": ".gpkg",
+    "ext_staged": ".gpkg",
+    "prop_duplicated": "polygon_duplicated",
+    "tile_path_structure": ["style", "tms", "z", "x", "y"],
+    "z_range": [0, 6],
+    "tile_size": [256, 256],
+    "enable_stager": true,
+    "enable_raster": false,
+    "enable_web_tiles": false,
+    "enable_3dtiles": true,
+    "generate_wmtsCapabilities": true
+}
