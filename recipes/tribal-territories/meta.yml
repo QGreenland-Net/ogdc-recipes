@@ -1,0 +1,27 @@
+# OGDC Visualization Workflow Recipe Configuration
+#
+# This recipe processes geospatial data for visualization using the pdgworkflow.WorkflowManager.
+# The workflow converts vector data into 3d tiles for interactive mapping and archival.
+#
+# Documentation:
+# - Viz workflow overview: https://github.com/PermafrostDiscoveryGateway/viz-workflow
+# - ConfigManager docs: https://github.com/PermafrostDiscoveryGateway/viz-workflow/blob/feature-wf-k8s/pdgworkflow/ConfigManager.py
+# - ConfigManager config options: See config.json in this directory for example configuration
+#
+# Configuration Notes:
+# - If config.json is missing, ConfigManager will use default behavior
+# - Output includes staged data and 3d tiles for interactive mapping
+
+name: "Native Territories Visualization Workflow"
+
+workflow:
+  type: "visualization"
+  config_file: "config.json"
+  parallel:
+    enabled: true
+    partition_strategy: "files"
+    partition_size: 50
+input:
+  params:
+    - type: "url"
+      value: "https://test.arcticdata.io/metacat/d1/mn/v2/object/urn%3Auuid%3A9efdf714-cf94-444c-9d89-d48db0ac94a3"
